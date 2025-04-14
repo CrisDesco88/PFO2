@@ -158,7 +158,10 @@ main section {
 .tarjeta:hover {
     transform: translateY(-5px);
     /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);*/
+    -webkit-box-shadow: -2px 7px 14px 3px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -2px 7px 14px 3px rgba(255, 255, 255, 1);
+    box-shadow: -2px 7px 14px 3px rgba(255, 255, 255, 1);
 }
 
 .tarjeta img {
@@ -255,7 +258,7 @@ p {
     font-weight: bolder;
 }
 
-/* Sección Películas Favoritas - Usando Flexbox */
+/* Sección Juegos Favoritos*/
 #juegos h3 {
     color: #272626;
 }
@@ -277,6 +280,14 @@ p {
     /* Tres columnas aprox. */
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.juego:hover {
+    transform: translateX(5px) translateY(-2px);
+    /* Efecto de elevación al pasar el mouse */
+    -webkit-box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
+    box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
 }
 
 .juego img {
