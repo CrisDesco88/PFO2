@@ -163,14 +163,17 @@ main section {
     border-radius: 4px;
 }
 
+.tarjeta h3,
+p {
+    color: #272626;
+}
+
 /* Estilo para el icono de enlace en las tarjetas */
 .tarjeta h3 .link-icon::after {
     content: '\1F517';
     /* Código Unicode para el icono de enlace (🔗) con un espacio antes */
     font-size: 0.8em;
     /* Tamaño ligeramente menor que el h3 */
-    color: #f7914d;
-    /* Color naranja para el icono */
     margin-left: 5px;
     /* Espacio entre el texto y el icono */
     display: inline-block;
@@ -219,7 +222,7 @@ main section {
 #contacto input[type="text"],
 #contacto input[type="email"],
 #contacto input[type="tel"] {
-    width: 100%;
+    width: 75%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -305,6 +308,7 @@ footer a:hover {
 }
 
 /* Media Queries para Responsividad */
+
 @media (max-width: 768px) {
 
     .tarjeta,
@@ -340,6 +344,12 @@ footer a:hover {
         border-bottom: 5px solid #f7914d;
         border-left: none;
         /* Borde izquierdo decorativo */
+    }
+
+    #contacto input[type="text"],
+    #contacto input[type="email"],
+    #contacto input[type="tel"] {
+        width: 100%;
     }
 
 
