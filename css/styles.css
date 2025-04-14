@@ -8,21 +8,31 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0D0B0C;
+    color: #dbd9dd;
 }
 
-h1, h2, h3 {
-    color: #0056b3; /* Un azul oscuro para los encabezados */
+h1,
+h2,
+h3 {
+    color: #ffff;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
 }
 
 a {
-    color: #007bff; /* Azul estándar para enlaces */
+    color: #ffff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline #f7914d;
 }
 
 ul {
@@ -31,34 +41,44 @@ ul {
 }
 
 img {
-    max-width: 100%; /* Asegura que las imágenes no se desborden */
+    max-width: 100%;
+    /* Asegura que las imágenes no se desborden */
     height: auto;
-    display: block; /* Evita espacios extra debajo de las imágenes */
+    display: block;
+    /* Evita espacios extra debajo de las imágenes */
 }
 
 /* Estructura Principal */
-header, nav, main, footer {
+header,
+nav,
+main,
+footer {
     padding: 20px;
     margin-bottom: 15px;
-    background-color: #fff; /* Fondo blanco para secciones principales */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
+    background-color: #3B383F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
 }
 
 header {
-    background-color: #007bff; /* Fondo azul para el encabezado */
-    color: #fff; /* Texto blanco */
+    background-color: #3B383F;
+    color: #ffffff;
+    /* Texto blanco */
     text-align: center;
 }
 
 header h1 {
-    color: #fff; /* Título principal en blanco */
+    color: #ffffff;
     margin: 0;
 }
 
 nav ul {
-    display: flex; /* Organiza los enlaces de navegación en fila */
-    justify-content: center; /* Centra los enlaces */
-    gap: 20px; /* Espacio entre enlaces */
+    display: flex;
+    /* Organiza los enlaces de navegación en fila */
+    justify-content: center;
+    /* Centra los enlaces */
+    gap: 20px;
+    /* Espacio entre enlaces */
 }
 
 nav a {
@@ -66,78 +86,129 @@ nav a {
 }
 
 main section {
-    margin-bottom: 30px; /* Espacio entre secciones del main */
+    margin-bottom: 30px;
+    /* Espacio entre secciones del main */
     padding: 20px;
-    border-left: 5px solid #007bff; /* Borde izquierdo decorativo */
+    border-left: 5px solid #f7914d;
+    /* Borde izquierdo decorativo */
 }
 
 /* Sección Sobre Mí */
 #sobre-mi img {
-    float: left; /* Imagen a la izquierda del texto */
-    margin-right: 20px;
-    margin-bottom: 10px;
-    border-radius: 50%; /* Imagen redonda */
-    border: 3px solid #007bff;
+    /*float: left;  Imagen a la izquierda del texto */
+    /* margin-right: 20px; */
+    /* margin-bottom: 10px; */
+    border-radius: 50%;
+    /* Imagen redonda */
+    border: 3px solid #f7914d;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    flex-grow: 1;
 }
 
-#sobre-mi::after { /* Clearfix para el float */
+.sobre-mi-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.sobre-mi-container p {
+    flex-grow: 2;
+    padding: 1.5em;
+}
+
+#sobre-mi::after {
+    /* Clearfix para el float */
     content: "";
     display: table;
     clear: both;
 }
 
 
+
 /* Sección Tarjetas (Proyectos) - Usando Flexbox */
 .tarjetas-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea */
-    gap: 20px; /* Espacio entre tarjetas */
-    justify-content: center; /* Centra las tarjetas si hay espacio */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas pasen a la siguiente línea */
+    gap: 20px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas si hay espacio */
 }
 
 .tarjeta {
-    background-color: #e9ecef; /* Fondo gris claro para tarjetas */
+    background-color: #e9ecef;
+    /* Fondo gris claro para tarjetas */
     border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 15px;
-    width: calc(50% - 40px); /* Dos columnas, ajustando por gap y padding */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+    width: calc(50% - 40px);
+    /* Dos columnas, ajustando por gap y padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición para hover */
 }
 
 .tarjeta:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .tarjeta img {
     margin-bottom: 10px;
+    margin-bottom: 10px;
     border-radius: 4px;
+}
+
+/* Estilo para el icono de enlace en las tarjetas */
+.tarjeta h3 .link-icon::after {
+    content: '\1F517';
+    /* Código Unicode para el icono de enlace (🔗) con un espacio antes */
+    font-size: 0.8em;
+    /* Tamaño ligeramente menor que el h3 */
+    color: #f7914d;
+    /* Color naranja para el icono */
+    margin-left: 5px;
+    /* Espacio entre el texto y el icono */
+    display: inline-block;
+    /* Asegura que se comporte como bloque en línea */
+    vertical-align: middle;
+    /* Alinea verticalmente con el texto */
 }
 
 /* Sección Habilidades - Usando Grid */
 .habilidades-listado {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas adaptables */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Columnas adaptables */
     gap: 20px;
 }
 
 .habilidades-listado div {
-    background-color: #f8f9fa;
+    background-color: #5D5962;
     padding: 15px;
     border-radius: 5px;
 }
 
 .habilidades-listado h3 {
     margin-top: 0;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #f7914d;
     padding-bottom: 5px;
+    color: #f7914d;
+}
+
+.habilidades-listado li {
+    color: #dbd9dd;
 }
 
 /* Sección Formulario de Contacto */
 #contacto form {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna por defecto */
+    grid-template-columns: 1fr;
+    /* Una columna por defecto */
     gap: 15px;
 }
 
@@ -152,23 +223,29 @@ main section {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    box-sizing: border-box;
+    /* Asegura que el padding no aumente el tamaño total */
 }
 
 #contacto button {
-    background-color: #28a745; /* Verde para el botón de envío */
+    background-color: #f7914d;
+    /* Verde para el botón de envío */
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease; /* Transición para hover */
-    justify-self: start; /* Alinea el botón a la izquierda */
+    transition: background-color 0.3s ease;
+    /* Transición para hover */
+    justify-self: start;
+    /* Alinea el botón a la izquierda */
 }
 
 #contacto button:hover {
-    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+    background-color: #5D5962;
+    color: #0D0B0C;
+    font-weight: bolder;
 }
 
 /* Sección Películas Favoritas - Usando Flexbox */
@@ -176,7 +253,8 @@ main section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around; /* Distribuye el espacio */
+    justify-content: space-around;
+    /* Distribuye el espacio */
 }
 
 .pelicula {
@@ -184,22 +262,27 @@ main section {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
-    width: calc(33% - 40px); /* Tres columnas aprox. */
+    width: calc(33% - 40px);
+    /* Tres columnas aprox. */
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .pelicula img {
-    margin: 10px auto; /* Centra la imagen */
-    max-height: 300px; /* Limita altura */
+    margin: 10px auto;
+    /* Centra la imagen */
+    max-height: 300px;
+    /* Limita altura */
     width: auto;
 }
 
 /* Pie de Página */
 footer {
     text-align: center;
-    background-color: #343a40; /* Fondo oscuro para el footer */
-    color: #f8f9fa; /* Texto claro */
+    background-color: #343a40;
+    /* Fondo oscuro para el footer */
+    color: #f8f9fa;
+    /* Texto claro */
     padding: 20px;
     margin-top: 20px;
 }
@@ -212,45 +295,74 @@ footer ul {
 }
 
 footer a {
-    color: #adb5bd; /* Color grisáceo para enlaces del footer */
+    color: #adb5bd;
+    /* Color grisáceo para enlaces del footer */
 }
 
 footer a:hover {
-    color: #fff; /* Blanco al pasar el mouse */
+    color: #fff;
+    /* Blanco al pasar el mouse */
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
-    .tarjeta, .pelicula {
-        width: calc(100% - 40px); /* Una columna en pantallas más pequeñas */
+
+    .tarjeta,
+    .pelicula {
+        width: calc(100% - 40px);
+        /* Una columna en pantallas más pequeñas */
     }
 
     #sobre-mi img {
-        float: none; /* Quita el float en pantallas pequeñas */
+        float: none;
+        /* Quita el float en pantallas pequeñas */
         display: block;
-        margin: 0 auto 15px auto; /* Centra la imagen */
+        margin: 0 auto 15px auto;
+        /* Centra la imagen */
+    }
+
+    .sobre-mi-container {
+        flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column; /* Enlaces de navegación en columna */
+        flex-direction: column;
+        /* Enlaces de navegación en columna */
         align-items: center;
     }
 
     .habilidades-listado {
-        grid-template-columns: 1fr; /* Una columna para habilidades */
+        grid-template-columns: 1fr;
+        /* Una columna para habilidades */
     }
+
+    main section {
+        border-bottom: 5px solid #f7914d;
+        border-left: none;
+        /* Borde izquierdo decorativo */
+    }
+
+
 }
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px; /* Reduce tamaño de fuente base */
+        font-size: 14px;
+        /* Reduce tamaño de fuente base */
     }
 
-    header, nav, main section, footer {
-        padding: 15px; /* Reduce padding general */
+    header,
+    nav,
+    main section,
+    footer {
+        padding: 15px;
+        /* Reduce padding general */
     }
 
     #contacto form {
-        gap: 10px; /* Reduce espacio en formulario */
+        gap: 10px;
+        /* Reduce espacio en formulario */
     }
+
+
 }
