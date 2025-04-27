@@ -12,6 +12,7 @@
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="/js/toogle-theme.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,19 @@
     <!-- Sección de Encabezado -->
     <header>
         <h1 class="animate__animated animate__slideInDown">Cristian R. Descosido Developer</h1>
-        <!-- Idea de mejora: Añadir un logo SVG en lugar de texto -->
+
+        <button class="theme-switcher-grid" id="theme-switcher-grid" aria-label="Switch theme">
+            <div class="sun" id="sun" aria-hidden="true"></div>
+            <div class="moon-overlay" id="moon-overlay" aria-hidden="true"></div>
+            <div class="cloud-ball cloud-ball-left" id="ball1" aria-hidden="true"></div>
+            <div class="cloud-ball cloud-ball-middle" id="ball2" aria-hidden="true"></div>
+            <div class="cloud-ball cloud-ball-right" id="ball3" aria-hidden="true"></div>
+            <div class="cloud-ball cloud-ball-top" id="ball4" aria-hidden="true"></div>
+            <div class="star" id="star1" aria-hidden="true"></div>
+            <div class="star" id="star2" aria-hidden="true"></div>
+            <div class="star" id="star3" aria-hidden="true"></div>
+            <div class="star" id="star4" aria-hidden="true"></div>
+        </button>
     </header>
 
     <!-- Sección de Navegación -->
@@ -123,25 +136,13 @@
         <!-- Sub-sección: Juegos Favoritos -->
         <section id="juegos">
             <h2>Mis Juegos Favoritos</h2>
-            <div class="juegos-container">
-                <div class="juego">
-                    <h3>Elden Ring</h3>
-                    <img src="img/elden-ring-photo.jpg" alt="Poster Elden Ring">
-                    <p>Uno de los juegos más completos que jugué en mi vida, historia, mundo abierto, arte, dificultad
-                        épicamente logradas.</p>
+            <div class="carousel-container">
+                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                <div class="carousel" data-carousel>
+                    <ul data-slides>
+                    </ul>
                 </div>
-                <div class="juego">
-                    <h3>Elder Scroll 5: Skyrim</h3>
-                    <img src="img/skyrim.jpg" alt="Poster Skyrim">
-                    <p>Fué el juego que me hizo descubrir el mundo abierto, cientos de horas gastadas en side-quests.
-                    </p>
-                </div>
-                <div class="juego">
-                    <h3>Stalker: Call of Pripyat</h3>
-                    <img src="img/stalker-photo.jpg" alt="Stalker">
-                    <p>Juego adictivo en el que tenes que sobrevivir en zona hostil llena de radiación, anomalías,
-                        mutantes y soldados.</p>
-                </div>
+                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
             </div>
         </section>
     </main>
@@ -158,6 +159,8 @@
         <p>&copy; 2025 Cristian R. Descosido. Todos los derechos reservados.</p>
     </footer>
 
+
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>
