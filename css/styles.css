@@ -320,13 +320,6 @@ main section {
     transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
-.juego:hover {
-    transform: translateX(5px) translateY(-2px);
-    /* Efecto de elevación al pasar el mouse */
-    -webkit-box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
-    box-shadow: -7px 2px 14px 3px rgba(255, 255, 255, 1);
-}
 
 .juego img {
     margin: 10px auto;
@@ -646,24 +639,27 @@ footer a:hover {
     font-size: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, .5);
+    color: light-dark(#f1f1f1, #333);
     cursor: pointer;
     border-radius: .25em;
     padding: 0 .5em;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: light-dark(#333, #f1f1f1);
     user-select: none;
 }
 
-.carousel-button:hover,
-.carousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
+/* .carousel-button span {
+    fill: light-dark(#f1f1f1, #333);
+} */
+
+.carousel-button:hover {
+    color: light-dark(#333, #f1f1f1);
+    background-color: light-dark(#f1f1f1, #333);
     outline: 0;
 }
 
-.carousel-button:focus {
+/* .carousel-button:focus {
     box-shadow: 0 0 0 2px black;
-}
+} */
 
 .carousel-button.prev {
     left: 1rem;
