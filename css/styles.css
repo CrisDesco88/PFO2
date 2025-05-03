@@ -88,6 +88,9 @@ header {
     background-color: light-dark(#e9ecef, #3B383F);
     color: light-dark(#333, #ffffff);
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -96,6 +99,11 @@ header h1 {
     margin: 0;
 }
 
+.theme-button-container {
+    display: flex;
+    align-items: center;
+
+}
 nav ul {
     display: flex;
     /* Organiza los enlaces de navegación en fila */
@@ -365,6 +373,14 @@ footer a:hover {
 /* Media Queries para Responsividad */
 
 @media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .theme-button-container{
+        justify-content: end;
+    }
 
     .tarjeta,
     .juego {
