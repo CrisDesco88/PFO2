@@ -28,7 +28,7 @@ Aquí tienes un resumen de las características implementadas en este portafolio
 *   **Uso de Google Fonts:**
     *   ✅ Enlace a Google Fonts en el `<head>` del HTML.
     *   ✅ Tipografía aplicada correctamente en el sitio.
-        *   **¿Por qué elegí Roboto?** 
+        *   **¿Por qué elegí Roboto?**
         Roboto es una fuente *sans-serif* moderna y legible, ideal para una apariencia limpia y profesional.
 
 *   **HTML:**
@@ -52,7 +52,7 @@ Aquí tienes un resumen de las características implementadas en este portafolio
         *   ✅ Estilos personalizados para tablas, botones, enlaces y formularios.
         *   ✅ Unidades relativas (%, rem, vh) para dimensiones.
         *   ✅ Al menos una animación o transición.
-            *   **Animación implementada:** 
+            *   **Animación implementada:**
             Efecto *hover* en las tarjetas para indicar interactividad.
             Efecto *slideInDown* de la librería *animate.css* utilizado en el título principal.
 
@@ -69,5 +69,37 @@ Aquí tienes un resumen de las características implementadas en este portafolio
 *   Google Fonts
 *   Librería animate.css
 *   Librería normalize.css
+
+## ✨ Mejoras Implementadas
+
+Se realizaron las siguientes mejoras en el código:
+
+### Funcionalidades Agregadas:
+
+1.  **Creación de Contenido Dinámico:**
+    *   Se utiliza JavaScript para generar dinámicamente el carrusel de juegos favoritos. Los datos de los juegos se almacenan en un array en el archivo `js/carousel.js`.
+    *   *Justificación:* Permite una fácil actualización y mantenimiento del contenido del carrusel sin necesidad de modificar el HTML directamente.
+
+2.  **Modo Oscuro/Claro:**
+    *   Se implementó un botón que permite alternar entre los modos oscuro y claro de la página. La preferencia del usuario se guarda en LocalStorage.
+    *   *Justificación:* Mejora la experiencia del usuario al permitirle elegir el tema que mejor se adapte a sus preferencias y condiciones de iluminación.
+
+3.  **Validación de Formulario:**
+    *   No se implementó la validación del formulario.
+    *   *Justificación:* No se implementó debido a limitaciones de tiempo.
+
+4.  **Contador de Visitas:**
+    *   Se implementó un contador de visitas a la página utilizando JavaScript y LocalStorage.
+    *   *Justificación:* Permite conocer la popularidad de la página y proporciona información útil sobre el tráfico del sitio.
+
+5.  **Temporizador o Reloj:**
+    *   Se incluyó un temporizador que indica el tiempo restante para la entrega del trabajo práctico, cuya fecha límite es el lunes, 5 de mayo de 2025, 23:59.
+    *   *Justificación:* Ayuda al usuario a visualizar rápidamente el tiempo restante para la entrega del trabajo.
+
+### Mejoras en Campos Existentes:
+
+*   **Mejor organización de los contenedores:** Se utiliza Flexbox para organizar los elementos en la sección de habilidades y hobbies, y Grid para el carrusel de juegos favoritos.
+*   **Mejor contraste y legibilidad:** Se ajustaron los colores del tema oscuro para mejorar el contraste y la legibilidad del texto.
+*   **Mejor estructuración del código CSS:** Se separaron los estilos en secciones organizadas para facilitar la edición.
 
 ¡Gracias por visitar mi portafolio!

@@ -21,7 +21,7 @@
     <!-- Sección de Encabezado -->
     <header>
         <h1 class="animate__animated animate__slideInDown">CRD Developer</h1>
-        
+
         <div class="theme-button-container">
             <button class="theme-switcher-grid" id="theme-switcher-grid" aria-label="Switch theme">
                 <div class="sun" id="sun" aria-hidden="true"></div>
@@ -37,12 +37,16 @@
             </button>
         </div>
     </header>
+    <div class="control-panel-container">
+        <div class="timer-container">
+            <h3>Tiempo restante entrega: <span id="countdown"></span></h3>
+        </div>
 
-    <div class="timer-container">
-        <h3>Tiempo restante entrega: <span id="countdown"></span></h3> 
+        <div class="visitor-counter">
+            <h3>Contador de visitas: <span id="visitorCount"></span></h3>
+        </div>
     </div>
-        
-    
+
 
     <!-- Sección de Navegación -->
     <nav>
@@ -126,18 +130,22 @@
         <!-- Sub-sección: Formulario de Contacto -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" id="contactForm">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
+                <span id="nombreError" class="error"></span>
 
                 <label for="apellido">Apellido:</label>
                 <input type="text" id="apellido" name="apellido" required>
+                <span id="apellidoError" class="error"></span>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
 
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono">
+                <span id="telefonoError" class="error"></span>
 
                 <button type="submit">Enviar Mensaje</button>
             </form>
@@ -147,14 +155,16 @@
         <!-- Sub-sección: Juegos Favoritos -->
         <section id="juegos">
             <h2>Mis Juegos Favoritos</h2>
-        <div class="carousel-container">
-            <button class="carousel-button prev" data-carousel-button="prev"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <div class="carousel-container">
+                <button class="carousel-button prev" data-carousel-button="prev"><span
+                        class="material-symbols-outlined">arrow_back_ios</span></button>
                 <div class="carousel" data-carousel>
                     <ul data-slides>
-                </ul>
-                    </div>
-                <button class="carousel-button next" data-carousel-button="next"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
-                    </div>
+                    </ul>
+                </div>
+                <button class="carousel-button next" data-carousel-button="next"><span
+                        class="material-symbols-outlined">arrow_forward_ios</span></button>
+            </div>
         </section>
     </main>
 
@@ -172,36 +182,11 @@
 
 
     <script src="js/carousel.js"></script>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("May 5, 2025 23:59:00").getTime();
-
-        // Update the countdown every 1 second
-        var x = setInterval(function() {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "¡Tiempo!";
-            }
-        }, 1000);
-    </script>
+:start_line:185
+-------
+    <script src="js/countdown.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    <script src="js/form-validation.js"></script>
 </body>
 
 </html>
