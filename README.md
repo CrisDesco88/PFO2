@@ -84,8 +84,6 @@ Se realizaron las siguientes mejoras en el código:
     *   Se implementó un botón que permite alternar entre los modos oscuro y claro de la página. La preferencia del usuario se guarda en LocalStorage.
     *   *Justificación:* Mejora la experiencia del usuario al permitirle elegir el tema que mejor se adapte a sus preferencias y condiciones de iluminación.
 
-:start_line:87
--------
 3.  **Validación de Formulario:**
     *   Se implementó la validación del formulario.
     *   *Justificación:* Se implementó la validación del formulario para asegurar que los campos obligatorios sean completados correctamente y que el formato del email sea válido.
